@@ -11,7 +11,7 @@ import sqlalchemy as sa
 n_institutions = 2000
 
 institution_ids = range(n_institutions)
-days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
 times = [("7:00", "12:00"), ("13:00", "18:00")]
 
 possible_opening_hours = [(day, start, end) for day in days for start, end in times]
