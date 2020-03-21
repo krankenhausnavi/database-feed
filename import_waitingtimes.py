@@ -15,7 +15,7 @@ column_names = ["institution_id", "service_type", "waiting_time", "timestamp"]
 waiting_times = [(i_id,
                   s_type,
                   random.randint(0,60)*5,
-                  datetime.now().timestamp())
+                  int(datetime.now().timestamp()))
                  for s_type in service_types
                  for i_id in institution_ids
                  if random.random() < 0.5]
