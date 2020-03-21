@@ -8,7 +8,7 @@ import pandas as pd
 import sqlalchemy as sa
 
 
-n_institutions = 2000
+n_institutions = 4000
 
 institution_ids = range(n_institutions)
 days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
