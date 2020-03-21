@@ -22,12 +22,10 @@ waiting_times = [(i_id,
 
 df_import = pd.DataFrame(waiting_times, columns=column_names)
 
-conStr = ""
-
 with open ("connection", "r") as myfile:
     conStr = myfile.readlines()[0]
 
 sqlCon = sa.create_engine(conStr)
 
-df_import.to_sql(name="institutions", con=sqlCon, index=False, if_exists="append")
+df_import.to_sql(name="waiting_times", con=sqlCon, index=False, if_exists="append")
 

@@ -5,6 +5,7 @@
 import random
 
 import pandas as pd
+import sqlalchemy as sa
 
 
 n_institutions = 2000
@@ -20,4 +21,9 @@ column_names = ["institution_id", "day", "start_time", "end_time"]
 opening_hours = [(institution_id, day, start, end) for institution_id in institution_ids for day, start, end in random.sample(possible_opening_hours, 6)]
 df_import = pd.DataFrame(opening_hours, columns=column_names)
 
-df_import.to_csv("opening_hours.csv", index=False)
+with open ("connection", "r") as myfile:
+    conStr = myfile.readlines()[0]
+
+sqlCon = sa.create_engine(conStr)
+
+df_import.to_sql(name="opening_hours", con=sqlCon, index=False, if_exists="append")
