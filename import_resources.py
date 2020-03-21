@@ -19,7 +19,7 @@ resources = [(institution_id, resource_type, max_cap, random.choice(range(max_ca
 
 column_names = ["institution_id", "resource_type", "current_capacity", "max_capacity", "timestamp"]
 
-df_import = pd.DataFrame(resources, columns=column_names, dtype=)
+df_import = pd.DataFrame(resources, columns=column_names)
 
 with open ("connection", "r") as myfile:
     conStr = myfile.readlines()[0]
