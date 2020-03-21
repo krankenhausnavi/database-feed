@@ -1,0 +1,5398 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>
+        KVB Arztsuche: Hausarzt
+    </title>
+
+    
+    <link href="/arztsuche/common/css/my_layout.css;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A" rel="stylesheet" media="screen" type="text/css"/>
+
+    
+    <link href="/arztsuche/common/css/screen/common_gui.css;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A" rel="stylesheet" media="screen" type="text/css"/>
+
+    
+    <link href="/arztsuche/common/css/screen/cg_topnav.css;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A" rel="stylesheet" media="screen" type="text/css"/>
+
+    
+    <link href="/arztsuche/common/css/print/common_gui.css;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A" rel="stylesheet" media="print, embossed" type="text/css"/>
+
+    
+    <link href="/arztsuche/project/css/project.css;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A" rel="stylesheet" media="screen" type="text/css"/>
+
+    
+
+    
+    <link href="/arztsuche/project/css/project_print.css;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A" rel="stylesheet" media="print" type="text/css"/>
+
+    
+    <link href="/arztsuche/project/css/autocomplete/jquery.autocomplete.css;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A" rel="stylesheet" media="screen" type="text/css"/>
+
+    
+    <link href="/arztsuche/project/css/autocomplete/thickbox.css;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A" rel="stylesheet" media="screen" type="text/css"/>
+
+    
+    <link rel="icon" href="/arztsuche/project/img/icons/favicon.ico;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A" type="image/x-icon"/>
+
+    <link href="/arztsuche/project/img/icons/favicon.ico;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A" rel="stylesheet" media="screen" type="text/css"/>
+
+    <script type="text/javascript"
+            src="/arztsuche/project/js/utils.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+    </script>
+
+    <script type="text/javascript"
+            src="/arztsuche/project/js/jquery.min.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+    </script>
+
+    <!--  JQuery-UI Dateien anbinden -->
+    
+    <link href="/arztsuche/project/css/jquery-ui.css;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A" rel="stylesheet" media="screen" type="text/css"/>
+    <script type="text/javascript"
+            src="/arztsuche/project/js/jquery-ui.min.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A"></script>
+    <script type="text/javascript"
+            src="/arztsuche/project/js/jquery.cookie.min.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A"></script>
+
+    <!-- Lade Skripte für Autocomplete -->
+    <script type="text/javascript"
+            src='/arztsuche/project/js/jquery.autocomplete.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A'>
+    </script>
+    <script type="text/javascript"
+            src='/arztsuche/project/js/ajaxAutoCompletion.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A'>
+    </script>
+    <script type="text/javascript"
+            src='/arztsuche/project/js/jquery.ajaxQueue.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A'>
+    </script>
+
+    <script type="text/javascript"
+            src='/arztsuche/project/js/chili-1.7.pack.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A'>
+    </script>
+    <script type="text/javascript"
+            src="/arztsuche/project/js/cargojsutils.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+    </script>
+
+    <!-- Lade Skripte für Geocoding und Maps API-->
+    
+
+    <script type="text/javascript"
+            src="/arztsuche/project/js/json.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A"></script>
+
+    <script type="text/javascript"
+            src='/arztsuche/project/js/geocoder.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A?version=1'>
+    </script>
+
+    
+
+    <!-- Lade Skripte für Matomo -->
+
+    <script type="text/javascript"
+            src='/arztsuche/project/js/matomo.js;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A'>
+    </script>
+</head>
+
+<body>
+<div id="page_margins">
+    <div id="page">
+        <div id="header">
+            <div class="WARN">Achtung: die Arztsuche wird aktuell überarbeitet und dadurch kann es zur Einschränkung der Suchperformance bzw. der Suchergebnisse kommen. <br />
+                In unseren aktuellen Arztlisten, unter <a href="https://www.kvb.de/service/arztverzeichnis/">https://www.kvb.de/service/arztverzeichnis/</a> können Sie alle Haus- und Fachärzte sowie Psychotherapeuten je Bezirksstelle alphabetisch sortiert erkennen.
+            </div>
+            <a title="Kassenärztliche Vereinigung Bayerns" href="http://www.kvb.de/home/"></a>
+
+            <div id="logo">
+                <a class="logo"
+                   href="http://www.kvb.de/"><img
+                        height="98" border="0" width="220" title="KVB" alt="KVB"
+                        src="/arztsuche/project/img/general/logo_kvb.jpg;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A"></a>
+            </div>
+        </div>
+
+        <!-- <div id="header_temp"></div> -->
+        <div id="main">
+            <div id="arztsuche">
+                <div id="col1">
+                    <div id="col1_content"></div>
+                </div>
+                <div id="col3">
+                    <div id="col3_content" class="clearfix">
+                        <div class="subcolumns">
+
+
+
+
+
+	<div class="suchergebnisse_hauptdiv" id="suchergebnisse">
+		<div class="suchergebnisse_titel">Suche nach Arzt oder Psychotherapeut</div>
+
+
+<table class="suchergebnisse_titeltabelle">
+    <tr>
+        <td class="suchergebnisse_titeltabelle_textspalte">
+            <div class="suchergebnisse_titeltabelle_ergebnisseangaben">
+                Ergebnisse: 1-10 von 19000<br/>
+                
+                    Ihre Suche ergab 19.000 oder mehr Treffer, bitte w&auml;hlen Sie weitere Suchkriterien um die Ergebniszahl einzuschr&auml;nken.
+                
+                
+                    <br />
+					Hinweis: Es werden alle Ärzte /Psychotherapeuten, die der Veröffentlichungspflicht unterliegen, angezeigt.
+				
+            </div>
+            
+
+    <div>
+        
+            
+                <span class="suchkriterien_bechreibung">Suche nach: </span>
+                <span class="suchkriterien_werte">Hausarzt</span>
+            
+            
+        
+        
+    </div>
+
+
+        </td>
+        <td class="suchergebnisse_titeltabelle_knopfspalte" style="text-align: top">
+            <div>
+                <form action="suchkriterienAendern.htm" method="get" style="margin: 0px; padding: 0px;">
+                    <input type="submit" value="Suchkriterien ändern" class="BUTTON BACKWARD INVERS"  />
+                    
+                        <input type="hidden" name="hashwert" value="3f48bfa494c160a935e7a18bee17" />
+                    
+                    
+                    
+                </form>
+                <br />
+                <form action="suchkriterienAendern.htm" method="get" style="margin: 0px; padding: 0px;">
+                    <input type="submit" value="Neue Suche" class="BUTTON BACKWARD INVERS"  />
+                    <input type="hidden" name="neu" value="true" />
+                </form>
+            </div>
+        </td>
+    </tr>
+</table>
+<br />
+<br />
+<div class="suchergebnisse_navigationsbalken_oben">
+    <table class="suchergebnisse_navigationsbalken">
+        <tr>
+            <td width="33%" class="suchergebnisse_navigationsbalken_zelle_links">
+                
+                    
+                    	
+					&nbsp;		
+				
+                
+            </td>
+            <td width="33%" class="suchergebnisse_navigationsbalken_zelle_mitte">
+                Treffer 1 bis 10 von 19000
+            </td>
+            <td width="33%" class="suchergebnisse_navigationsbalken_zelle_rechts">
+                
+                    
+                        <form action="suchergebnisse.htm" method="get" style="margin: 0px; padding: 0px">
+                            <input type="submit" value="nächste Seite" class="BUTTON FORWARD" id="1" />
+                            
+                                <input type="hidden" name="hashwert" value="3f48bfa494c160a935e7a18bee17" />
+                            
+                            
+                            
+                            
+                                <input type="hidden" name="page" value="2" />
+                            
+                            
+                                <input type="hidden" name="zeigeKarte" value="false" />
+                            
+                            
+                                <input type="hidden" name="resultCount" value="19000"/>
+                            
+                        </form>
+                    
+                    
+                
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+        
+   		<div class="suchergebnisse_liste">
+
+
+	
+	
+	
+		
+			<div class="suchergebnisse_praxis_tabelle"> 
+						<table class="suchergebnisse_praxis_innere_tabelle">
+		
+		
+	
+			 
+	<tr>
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"></td>
+		<td class="sprechzeiten_zelle leere_zeile"></td>	
+	</tr>
+
+	<tr>
+		<td class="entfernung_zelle">
+    
+        <table class="entfernung_tabelle">
+            <tr>
+                <td class="blase">
+
+                    
+                    <div class="blase">
+                        <img src="/arztsuche/project/img/icons/google/gm_icon_arztinliste_1.png;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    
+</td>
+				<td class="name_zelle">
+			<table class="name_tabelle">
+				<tr>
+					<td class="titel_name_zelle">
+					   <a href="/arztsuche/app/arztInfo.htm?arztCode=2946b1eecd67fcbe0c30566fd95edc78">Dr. med. (I). Mahmood Abazari</a>
+					</td>								
+				</tr>
+				
+					<tr>				
+						<td class="arztart_zelle">
+							Hausarzt
+						</td>
+					</tr>
+				
+				<tr>
+					<td class="fachgebiet_zelle">
+						
+							
+							
+							Facharzt für Allgemeinmedizin
+                            
+                        
+
+						
+						
+					</td>
+				</tr>
+            </table>
+            
+                <br />
+                <hr />
+                <table class="name_tabelle">
+                        <tr>
+                            <td>
+                                <span class="zusatzinfo_titel">Zusatzbezeichnungen:</span><br/>
+                                
+                                    Akupunktur
+                                    <br/>
+                                
+                                    Chirotherapie
+                                    <br/>
+                                
+                                    Naturheilverfahren
+                                    <br/>
+                                
+                            </td>
+                        </tr>
+                </table>
+            
+            <table class="name_tabelle">
+                <tr>
+                    <td class="nur_intern_sichtbar">
+                        
+                    </td>
+                </tr>
+            </table>
+		</td>
+		<td class="adresse_zelle">
+    <table class="adresse_tabelle">
+        <!-- im Fall von speziellen Leistungsortarten auch den Namen der Betriebsstaette hier ausgeben -->
+        
+        
+            <tr>
+                <td>
+                        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        Obere Marktstraße&nbsp;9
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        92318&nbsp;Neumarkt i.d.OPf.
+                </td>
+            </tr>
+        
+
+        
+    </table>
+    <table class="tel_tabelle">
+        
+            <tr>
+                <td class="tel_td">
+                    Tel.:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                09181-220200
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+        
+        
+        
+    </table>
+</td>
+		<td class="sprechzeiten_zelle">
+    <div class="header">Sprechzeiten:</div>
+    <table class="sprechzeiten_tabelle">
+        
+            
+            
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mo:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:00-12:00 15:00-17:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Di:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:00-12:00 16:00-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mi:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:00-12:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Do:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:00-12:00 16:00-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Fr:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:00-12:00 15:00-17:00
+                        </td>
+                    </tr>
+                
+                
+                    <tr>
+                        <td colspan="2">
+                                und nach Vereinbarung
+                        </td>
+                    </tr>
+                
+            
+        
+        
+        
+    </table>
+</td>
+	</tr>
+
+    
+
+<tr>
+
+
+
+
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"><span style="font-size: 10px !important;padding-right: 8px !important;">Betriebsstätte einer Einzelpraxis</span></td>
+
+	
+
+    
+	
+		<td class="name_zelle leere_zeile" style="border-bottom: 1px solid #DBDBDB !important"></td>
+    
+
+
+</tr>
+				
+	<tr>
+		<td class="entfernung_zelle_mehr_info_bereich" colspan="4">
+			<div id="suchergebnisse_zusatzinfo1" class="suchergebnisse_zusatzinfo">
+				<table class="suchergebnisse_zusatzinfo">
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte">										
+							<table class="bsnr_lanr">
+								<tr>
+									<td>
+										
+									</td>										
+									<td>
+										
+										
+										<br/>
+										
+											
+												
+												
+													<span class="zusatzinfo_text">
+														
+													</span>	
+																					
+																					
+									</td>
+								</tr>
+							</table>								
+							<br/>
+
+							
+							<br/>						
+						</td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte">
+                            
+                                <span class="zusatzinfo_titel">Genehmigungen:</span>
+                                <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Akupunktur i.R.d. Schmerztherapie</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Chirotherapie</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Chirotherapie - Extremitäten</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Asthma/COPD - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP KHK - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ2 - koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Hautkrebs-Screening - Früherkennungsuntersuchung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Langzeit-EKG - Aufzeichnung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Psychosomatische Grundversorgung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Abdomen und Retroperitoneum</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie der Schilddrüse</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                <br/>
+                            
+                            
+						</td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte">																		
+								
+							
+								
+															
+						</td>
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+								
+					</table>
+				</div>
+			</td>
+		</tr>
+
+						
+			</table>
+		
+		
+		
+			</div>	
+		
+			
+			
+	
+	
+	
+	
+		
+		
+			
+				
+					<div class="suchergebnisse_praxis_tabelle" id="naechste_tabelle">
+									<table class="suchergebnisse_praxis_innere_tabelle">				
+				
+				
+					
+		
+	
+			 
+	<tr>
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"></td>
+		<td class="sprechzeiten_zelle leere_zeile"></td>	
+	</tr>
+
+	<tr>
+		<td class="entfernung_zelle">
+    
+        <table class="entfernung_tabelle">
+            <tr>
+                <td class="blase">
+
+                    
+                    <div class="blase">
+                        <img src="/arztsuche/project/img/icons/google/gm_icon_arztinliste_2.png;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    
+</td>
+				<td class="name_zelle">
+			<table class="name_tabelle">
+				<tr>
+					<td class="titel_name_zelle">
+					   <a href="/arztsuche/app/arztInfo.htm?arztCode=e49a46773f348bee17c77e5cfff4b0df">Dr. med. Carmela Abbate-Schicktanz</a>
+					</td>								
+				</tr>
+				
+					<tr>				
+						<td class="arztart_zelle">
+							Hausarzt
+						</td>
+					</tr>
+				
+				<tr>
+					<td class="fachgebiet_zelle">
+						
+							
+							
+							Fachärztin für Allgemeinmedizin
+                            
+                        
+
+						
+						
+					</td>
+				</tr>
+            </table>
+            
+            <table class="name_tabelle">
+                <tr>
+                    <td class="nur_intern_sichtbar">
+                        
+                    </td>
+                </tr>
+            </table>
+		</td>
+		<td class="adresse_zelle">
+    <table class="adresse_tabelle">
+        <!-- im Fall von speziellen Leistungsortarten auch den Namen der Betriebsstaette hier ausgeben -->
+        
+        
+            <tr>
+                <td>
+                        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        Am Köchlinweiher&nbsp;1
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        88131&nbsp;Lindau (Bodensee)
+                </td>
+            </tr>
+        
+
+        
+    </table>
+    <table class="tel_tabelle">
+        
+            <tr>
+                <td class="tel_td">
+                    Tel.:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                08382-73768
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+        
+        
+        
+    </table>
+</td>
+		<td class="sprechzeiten_zelle">
+    <div class="header">Sprechzeiten:</div>
+    <table class="sprechzeiten_tabelle">
+        
+            
+            
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mo:
+                        </td>
+                        <td class="uhrzeiten">
+                                07:45-12:00 14:45-18:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Di:
+                        </td>
+                        <td class="uhrzeiten">
+                                07:45-12:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mi:
+                        </td>
+                        <td class="uhrzeiten">
+                                07:45-12:00 15:45-19:30
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Do:
+                        </td>
+                        <td class="uhrzeiten">
+                                07:45-12:00 14:45-18:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Fr:
+                        </td>
+                        <td class="uhrzeiten">
+                                07:45-14:00
+                        </td>
+                    </tr>
+                
+                
+            
+        
+        
+        
+    </table>
+</td>
+	</tr>
+
+    
+
+<tr>
+
+
+
+
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"><span style="font-size: 10px !important;padding-right: 8px !important;">Betriebsstätte einer örtlichen Gemeinschaftspraxis</span></td>
+
+	
+
+    
+        <script language="javascript">
+            document.write("<td id='mehrInfoZelle2' class='mehr_info_zelle' style='border-bottom: 1px solid #DBDBDB !important'>");
+            document.write("	<div class='mehr_info_div'>");
+            document.write("		<a href='#' id='suchergebnisse_zusatzinfo_link2' class='mehr_info_link'>[+] mehr Informationen</a>");
+            document.write("	</div>");
+            document.write("</td>");
+        </script>
+        <noscript>
+            <td id="mehrInfoZelle2" style="border-bottom: 1px solid #DBDBDB !important">
+            </td>
+        </noscript>
+	
+	
+
+
+</tr>
+				
+	<tr>
+		<td class="entfernung_zelle_mehr_info_bereich" colspan="4">
+			<div id="suchergebnisse_zusatzinfo2" class="suchergebnisse_zusatzinfo">
+				<table class="suchergebnisse_zusatzinfo">
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte">										
+							<table class="bsnr_lanr">
+								<tr>
+									<td>
+										
+									</td>										
+									<td>
+										
+										
+										<br/>
+										
+											
+												
+												
+													<span class="zusatzinfo_text">
+														
+													</span>	
+																					
+																					
+									</td>
+								</tr>
+							</table>								
+							<br/>
+
+							
+							<br/>						
+						</td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte">
+                            
+                                <span class="zusatzinfo_titel">Genehmigungen:</span>
+                                <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">02311 Behandlung diabetischer Fuss</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Asthma/COPD - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP KHK - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP KHK - Schulung Hypertonie (ZI)</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ2 - koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Diabetologisch qualifizierter Hausarzt LKK</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Hautkrebs-Screening - Früherkennungsuntersuchung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Schulung Hypertonie Zi</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Schulung mit Insulin</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Schulung ohne Insulin</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Teilnahme am Diabetesvertrag mit DAK / KKH</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                <br/>
+                            
+                            
+						</td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte">																		
+								
+							
+								
+							
+									<table class="gemeinschaftspraxis">
+										<tr>
+											<td class="titel_zelle">
+												Ärzte der Praxis:
+											</td>
+										</tr>
+											
+										
+												<tr>
+													<td class="arzt_zelle">
+														<span class="arzt_name">
+															<a href="/arztsuche/app/arztInfo.htm?arztCode=54698166079e63b5efc6ca5074561bc4">Dr. med. Klaus Schicktanz</a>													
+														</span>
+														<br/>
+														<span class="arzt_fachrichtungen">	
+																		
+																	Facharzt für Allgemeinmedizin
+																<br/>																 
+															 
+														</span>																			
+													</td>
+												</tr>
+										
+									</table>
+															
+						</td>
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+								
+					</table>
+				</div>
+			</td>
+		</tr>
+
+						
+			</table>
+		
+		
+		
+			</div>	
+		
+			
+			
+	
+	
+	
+	
+		
+		
+			
+				
+					<div class="suchergebnisse_praxis_tabelle" id="naechste_tabelle">
+									<table class="suchergebnisse_praxis_innere_tabelle">				
+				
+				
+					
+		
+	
+			 
+	<tr>
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"></td>
+		<td class="sprechzeiten_zelle leere_zeile"></td>	
+	</tr>
+
+	<tr>
+		<td class="entfernung_zelle">
+    
+        <table class="entfernung_tabelle">
+            <tr>
+                <td class="blase">
+
+                    
+                    <div class="blase">
+                        <img src="/arztsuche/project/img/icons/google/gm_icon_arztinliste_3.png;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    
+</td>
+				<td class="name_zelle">
+			<table class="name_tabelle">
+				<tr>
+					<td class="titel_name_zelle">
+					   <a href="/arztsuche/app/arztInfo.htm?arztCode=8df2b294995db9aebfb15c30ae5a7166">Dr. med. Gudrun Abbushi</a>
+					</td>								
+				</tr>
+				
+					<tr>				
+						<td class="arztart_zelle">
+							Hausarzt
+						</td>
+					</tr>
+				
+				<tr>
+					<td class="fachgebiet_zelle">
+						
+							
+							
+							Fachärztin für Allgemeinmedizin
+                            
+                        
+
+						
+						
+					</td>
+				</tr>
+            </table>
+            
+            <table class="name_tabelle">
+                <tr>
+                    <td class="nur_intern_sichtbar">
+                        
+                    </td>
+                </tr>
+            </table>
+		</td>
+		<td class="adresse_zelle">
+    <table class="adresse_tabelle">
+        <!-- im Fall von speziellen Leistungsortarten auch den Namen der Betriebsstaette hier ausgeben -->
+        
+        
+            <tr>
+                <td>
+                        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        Bahnhofstraße&nbsp;21
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        82041&nbsp;Oberhaching
+                </td>
+            </tr>
+        
+
+        
+    </table>
+    <table class="tel_tabelle">
+        
+            <tr>
+                <td class="tel_td">
+                    Tel.:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                089-6132885
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+        
+        
+        
+    </table>
+</td>
+		<td class="sprechzeiten_zelle">
+    <div class="header">Sprechzeiten:</div>
+    <table class="sprechzeiten_tabelle">
+        
+            
+            
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mo:
+                        </td>
+                        <td class="uhrzeiten">
+                                16:00-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Di:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-12:00 16:00-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mi:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-12:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Do:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-12:00 16:00-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Fr:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-12:00
+                        </td>
+                    </tr>
+                
+                
+                    <tr>
+                        <td colspan="2">
+                                und nach Vereinbarung
+                        </td>
+                    </tr>
+                
+            
+        
+        
+        
+    </table>
+</td>
+	</tr>
+
+    
+
+<tr>
+
+
+
+
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"><span style="font-size: 10px !important;padding-right: 8px !important;">Angestellt in Betriebsstätte einer Einzelpraxis</span></td>
+
+	
+
+    
+        <script language="javascript">
+            document.write("<td id='mehrInfoZelle3' class='mehr_info_zelle' style='border-bottom: 1px solid #DBDBDB !important'>");
+            document.write("	<div class='mehr_info_div'>");
+            document.write("		<a href='#' id='suchergebnisse_zusatzinfo_link3' class='mehr_info_link'>[+] mehr Informationen</a>");
+            document.write("	</div>");
+            document.write("</td>");
+        </script>
+        <noscript>
+            <td id="mehrInfoZelle3" style="border-bottom: 1px solid #DBDBDB !important">
+            </td>
+        </noscript>
+	
+	
+
+
+</tr>
+				
+	<tr>
+		<td class="entfernung_zelle_mehr_info_bereich" colspan="4">
+			<div id="suchergebnisse_zusatzinfo3" class="suchergebnisse_zusatzinfo">
+				<table class="suchergebnisse_zusatzinfo">
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte">										
+							<table class="bsnr_lanr">
+								<tr>
+									<td>
+										
+									</td>										
+									<td>
+										
+										
+										<br/>
+										
+											
+												
+												
+													<span class="zusatzinfo_text">
+														
+													</span>	
+																					
+																					
+									</td>
+								</tr>
+							</table>								
+							<br/>
+
+							
+							<br/>						
+						</td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte">
+                            
+                                <span class="zusatzinfo_titel">Genehmigungen:</span>
+                                <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Autogenes Training, Hypnose, Jakobsonsche Relaxationstherapie</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Chirotherapie</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Chirotherapie - Extremitäten</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Asthma/COPD - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP KHK - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ2 - koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Hautkrebs-Screening - Früherkennungsuntersuchung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Psychosomatische Grundversorgung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Abdomen und Retroperitoneum</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Uro-Genitalorgane</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Teilnahme am Diabetesvertrag mit DAK / KKH</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                <br/>
+                            
+                            
+						</td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte">																		
+								
+							
+								
+							
+									<table class="gemeinschaftspraxis">
+										<tr>
+											<td class="titel_zelle">
+												Ärzte der Praxis:
+											</td>
+										</tr>
+											
+										
+												<tr>
+													<td class="arzt_zelle">
+														<span class="arzt_name">
+															<a href="/arztsuche/app/arztInfo.htm?arztCode=80febbcaebcba67e015d79aeccd9a99a">Dr. med. Oliver Abbushi</a>													
+														</span>
+														<br/>
+														<span class="arzt_fachrichtungen">	
+																		
+																	Facharzt für Allgemeinmedizin
+																<br/>																 
+															 
+														</span>																			
+													</td>
+												</tr>
+										
+									</table>
+															
+						</td>
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+								
+					</table>
+				</div>
+			</td>
+		</tr>
+
+						
+			</table>
+		
+		
+		
+			</div>	
+		
+			
+			
+	
+	
+	
+	
+		
+		
+			
+				
+					<div class="suchergebnisse_praxis_tabelle" id="naechste_tabelle">
+									<table class="suchergebnisse_praxis_innere_tabelle">				
+				
+				
+					
+		
+	
+			 
+	<tr>
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"></td>
+		<td class="sprechzeiten_zelle leere_zeile"></td>	
+	</tr>
+
+	<tr>
+		<td class="entfernung_zelle">
+    
+        <table class="entfernung_tabelle">
+            <tr>
+                <td class="blase">
+
+                    
+                    <div class="blase">
+                        <img src="/arztsuche/project/img/icons/google/gm_icon_arztinliste_4.png;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    
+</td>
+				<td class="name_zelle">
+			<table class="name_tabelle">
+				<tr>
+					<td class="titel_name_zelle">
+					   <a href="/arztsuche/app/arztInfo.htm?arztCode=80febbcaebcba67e015d79aeccd9a99a">Dr. med. Oliver Abbushi</a>
+					</td>								
+				</tr>
+				
+					<tr>				
+						<td class="arztart_zelle">
+							Hausarzt
+						</td>
+					</tr>
+				
+				<tr>
+					<td class="fachgebiet_zelle">
+						
+							
+							
+							Facharzt für Allgemeinmedizin
+                            
+                        
+
+						
+						
+					</td>
+				</tr>
+            </table>
+            
+            <table class="name_tabelle">
+                <tr>
+                    <td class="nur_intern_sichtbar">
+                        
+                    </td>
+                </tr>
+            </table>
+		</td>
+		<td class="adresse_zelle">
+    <table class="adresse_tabelle">
+        <!-- im Fall von speziellen Leistungsortarten auch den Namen der Betriebsstaette hier ausgeben -->
+        
+        
+            <tr>
+                <td>
+                        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        Bahnhofstraße&nbsp;21
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        82041&nbsp;Oberhaching
+                </td>
+            </tr>
+        
+
+        
+    </table>
+    <table class="tel_tabelle">
+        
+            <tr>
+                <td class="tel_td">
+                    Tel.:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                089-6132885
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+        
+        
+        
+    </table>
+</td>
+		<td class="sprechzeiten_zelle">
+    <div class="header">Sprechzeiten:</div>
+    <table class="sprechzeiten_tabelle">
+        
+            
+            
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mo:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:30-12:00 16:00-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Di:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:30-12:00 16:00-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mi:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:30-12:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Do:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:30-12:00 16:00-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Fr:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:30-12:00
+                        </td>
+                    </tr>
+                
+                
+                    <tr>
+                        <td colspan="2">
+                                
+                        </td>
+                    </tr>
+                
+            
+        
+        
+        
+    </table>
+</td>
+	</tr>
+
+    
+
+<tr>
+
+
+
+
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"><span style="font-size: 10px !important;padding-right: 8px !important;">Betriebsstätte einer Einzelpraxis</span></td>
+
+	
+
+    
+        <script language="javascript">
+            document.write("<td id='mehrInfoZelle4' class='mehr_info_zelle' style='border-bottom: 1px solid #DBDBDB !important'>");
+            document.write("	<div class='mehr_info_div'>");
+            document.write("		<a href='#' id='suchergebnisse_zusatzinfo_link4' class='mehr_info_link'>[+] mehr Informationen</a>");
+            document.write("	</div>");
+            document.write("</td>");
+        </script>
+        <noscript>
+            <td id="mehrInfoZelle4" style="border-bottom: 1px solid #DBDBDB !important">
+            </td>
+        </noscript>
+	
+	
+
+
+</tr>
+				
+	<tr>
+		<td class="entfernung_zelle_mehr_info_bereich" colspan="4">
+			<div id="suchergebnisse_zusatzinfo4" class="suchergebnisse_zusatzinfo">
+				<table class="suchergebnisse_zusatzinfo">
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte">										
+							<table class="bsnr_lanr">
+								<tr>
+									<td>
+										
+									</td>										
+									<td>
+										
+										
+										<br/>
+										
+											
+												
+												
+													<span class="zusatzinfo_text">
+														
+													</span>	
+																					
+																					
+									</td>
+								</tr>
+							</table>								
+							<br/>
+
+							
+							<br/>						
+						</td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte">
+                            
+                                <span class="zusatzinfo_titel">Genehmigungen:</span>
+                                <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Asthma/COPD - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP KHK - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ2 - koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Diabetologisch qualifizierter Hausarzt LKK</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Hautkrebs-Screening - Früherkennungsuntersuchung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Langzeit-EKG - Aufzeichnung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Langzeit-EKG - Auswertung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Psychosomatische Grundversorgung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Schulung ohne Insulin</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Abdomen und Retroperitoneum</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Extrakranieller Gefäße(CW-Doppler)</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Gefäße Extremitäten (CW-Doppler)</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Uro-Genitalorgane</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie der Schilddrüse</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Videosprechstunde</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                <br/>
+                            
+                            
+						</td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte">																		
+								
+							
+								
+							
+									<table class="gemeinschaftspraxis">
+										<tr>
+											<td class="titel_zelle">
+												Ärzte der Praxis:
+											</td>
+										</tr>
+											
+										
+												<tr>
+													<td class="arzt_zelle">
+														<span class="arzt_name">
+															<a href="/arztsuche/app/arztInfo.htm?arztCode=8df2b294995db9aebfb15c30ae5a7166">Dr. med. Gudrun Abbushi</a>													
+														</span>
+														<br/>
+														<span class="arzt_fachrichtungen">	
+																		
+																	Fachärztin für Allgemeinmedizin
+																<br/>																 
+															 
+														</span>																			
+													</td>
+												</tr>
+										
+									</table>
+															
+						</td>
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+								
+					</table>
+				</div>
+			</td>
+		</tr>
+
+						
+			</table>
+		
+		
+		
+			</div>	
+		
+			
+			
+	
+	
+	
+	
+		
+		
+			
+				
+					<div class="suchergebnisse_praxis_tabelle" id="naechste_tabelle">
+									<table class="suchergebnisse_praxis_innere_tabelle">				
+				
+				
+					
+		
+	
+			 
+	<tr>
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"></td>
+		<td class="sprechzeiten_zelle leere_zeile"></td>	
+	</tr>
+
+	<tr>
+		<td class="entfernung_zelle">
+    
+        <table class="entfernung_tabelle">
+            <tr>
+                <td class="blase">
+
+                    
+                    <div class="blase">
+                        <img src="/arztsuche/project/img/icons/google/gm_icon_arztinliste_5.png;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    
+</td>
+				<td class="name_zelle">
+			<table class="name_tabelle">
+				<tr>
+					<td class="titel_name_zelle">
+					   <a href="/arztsuche/app/arztInfo.htm?arztCode=535f4b4649fd0d85ac5bbac1df6fde55">Dr. med. Günter Abelein</a>
+					</td>								
+				</tr>
+				
+					<tr>				
+						<td class="arztart_zelle">
+							Hausarzt
+						</td>
+					</tr>
+				
+				<tr>
+					<td class="fachgebiet_zelle">
+						
+							
+							
+							Praktischer Arzt
+                            
+                        
+
+						
+						
+					</td>
+				</tr>
+            </table>
+            
+            <table class="name_tabelle">
+                <tr>
+                    <td class="nur_intern_sichtbar">
+                        
+                    </td>
+                </tr>
+            </table>
+		</td>
+		<td class="adresse_zelle">
+    <table class="adresse_tabelle">
+        <!-- im Fall von speziellen Leistungsortarten auch den Namen der Betriebsstaette hier ausgeben -->
+        
+        
+            <tr>
+                <td>
+                        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        Sperberstraße&nbsp;80
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        90461&nbsp;Nürnberg
+                </td>
+            </tr>
+        
+
+        
+    </table>
+    <table class="tel_tabelle">
+        
+            <tr>
+                <td class="tel_td">
+                    Tel.:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                0911-451960
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+        
+        
+        
+    </table>
+</td>
+		<td class="sprechzeiten_zelle">
+    <div class="header">Sprechzeiten:</div>
+    <table class="sprechzeiten_tabelle">
+        
+            
+            
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mo:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-12:00 15:00-18:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Di:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-12:00 15:00-18:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mi:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-13:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Do:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-12:00 15:00-18:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Fr:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-13:00
+                        </td>
+                    </tr>
+                
+                
+                    <tr>
+                        <td colspan="2">
+                                und nach Vereinbarung
+                        </td>
+                    </tr>
+                
+            
+        
+        
+        
+    </table>
+</td>
+	</tr>
+
+    
+
+<tr>
+
+
+
+
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"><span style="font-size: 10px !important;padding-right: 8px !important;">Betriebsstätte einer örtlichen Gemeinschaftspraxis</span></td>
+
+	
+
+    
+        <script language="javascript">
+            document.write("<td id='mehrInfoZelle5' class='mehr_info_zelle' style='border-bottom: 1px solid #DBDBDB !important'>");
+            document.write("	<div class='mehr_info_div'>");
+            document.write("		<a href='#' id='suchergebnisse_zusatzinfo_link5' class='mehr_info_link'>[+] mehr Informationen</a>");
+            document.write("	</div>");
+            document.write("</td>");
+        </script>
+        <noscript>
+            <td id="mehrInfoZelle5" style="border-bottom: 1px solid #DBDBDB !important">
+            </td>
+        </noscript>
+	
+	
+
+
+</tr>
+				
+	<tr>
+		<td class="entfernung_zelle_mehr_info_bereich" colspan="4">
+			<div id="suchergebnisse_zusatzinfo5" class="suchergebnisse_zusatzinfo">
+				<table class="suchergebnisse_zusatzinfo">
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte">										
+							<table class="bsnr_lanr">
+								<tr>
+									<td>
+										
+									</td>										
+									<td>
+										
+										
+										<br/>
+										
+											
+												
+												
+													<span class="zusatzinfo_text">
+														
+													</span>	
+																					
+																					
+									</td>
+								</tr>
+							</table>								
+							<br/>
+
+							
+							<br/>						
+						</td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte">
+                            
+                                <span class="zusatzinfo_titel">Genehmigungen:</span>
+                                <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Asthma/COPD - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP KHK - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ1 - koordinierender Arzt /hausärztlich</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ2 - koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">HIV-/Aids-Behandlung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">HIV-Präexpositionsprophylaxe</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Hautkrebs-Screening - Früherkennungsuntersuchung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Langzeit-EKG - Aufzeichnung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Methadongenehmigung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Psychosomatische Grundversorgung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Abdomen und Retroperitoneum</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Thoraxorgane</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Uro-Genitalorgane</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie der Schilddrüse</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                <br/>
+                            
+                            
+						</td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte">																		
+								
+							
+								
+							
+									<table class="gemeinschaftspraxis">
+										<tr>
+											<td class="titel_zelle">
+												Ärzte der Praxis:
+											</td>
+										</tr>
+											
+										
+												<tr>
+													<td class="arzt_zelle">
+														<span class="arzt_name">
+															<a href="/arztsuche/app/arztInfo.htm?arztCode=9e98cf5d1d0077f139e1a327d35857a4">Dr. med. Martin Helm</a>													
+														</span>
+														<br/>
+														<span class="arzt_fachrichtungen">	
+																		
+																	Praktischer Arzt
+																<br/>																 
+															 
+														</span>																			
+													</td>
+												</tr>
+										
+									</table>
+															
+						</td>
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+								
+					</table>
+				</div>
+			</td>
+		</tr>
+
+						
+			</table>
+		
+		
+		
+			</div>	
+		
+			
+			
+	
+	
+	
+	
+		
+		
+			
+				
+					<div class="suchergebnisse_praxis_tabelle" id="naechste_tabelle">
+									<table class="suchergebnisse_praxis_innere_tabelle">				
+				
+				
+					
+		
+	
+			 
+	<tr>
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"></td>
+		<td class="sprechzeiten_zelle leere_zeile"></td>	
+	</tr>
+
+	<tr>
+		<td class="entfernung_zelle">
+    
+        <table class="entfernung_tabelle">
+            <tr>
+                <td class="blase">
+
+                    
+                    <div class="blase">
+                        <img src="/arztsuche/project/img/icons/google/gm_icon_arztinliste_6.png;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    
+</td>
+				<td class="name_zelle">
+			<table class="name_tabelle">
+				<tr>
+					<td class="titel_name_zelle">
+					   <a href="/arztsuche/app/arztInfo.htm?arztCode=eda3b1cd72c28c4e83917c86da16d32d">Dr. med. Gabriele Abele-Mayer</a>
+					</td>								
+				</tr>
+				
+					<tr>				
+						<td class="arztart_zelle">
+							Hausarzt
+						</td>
+					</tr>
+				
+				<tr>
+					<td class="fachgebiet_zelle">
+						
+							
+							
+							Fachärztin für Allgemeinmedizin
+                            
+                        
+
+						
+						
+					</td>
+				</tr>
+            </table>
+            
+            <table class="name_tabelle">
+                <tr>
+                    <td class="nur_intern_sichtbar">
+                        
+                    </td>
+                </tr>
+            </table>
+		</td>
+		<td class="adresse_zelle">
+    <table class="adresse_tabelle">
+        <!-- im Fall von speziellen Leistungsortarten auch den Namen der Betriebsstaette hier ausgeben -->
+        
+        
+            <tr>
+                <td>
+                        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        Hauptstraße&nbsp;64
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        96482&nbsp;Ahorn
+                </td>
+            </tr>
+        
+
+        
+    </table>
+    <table class="tel_tabelle">
+        
+            <tr>
+                <td class="tel_td">
+                    Tel.:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                09561-7926588
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+        
+        
+        
+            <tr>
+                <td class="tel_td">
+                    Web:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                <a href="http://www.arztpraxis-ahorn-coburg.de" target="_blank">http://www.arztpraxis-ahorn-coburg.de</a>
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+    </table>
+</td>
+		<td class="sprechzeiten_zelle">
+    <div class="header">Sprechzeiten:</div>
+    <table class="sprechzeiten_tabelle">
+        
+            
+            
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mo:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:00-12:00 16:00-18:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Di:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-12:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mi:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-12:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Do:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-12:00 16:00-18:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Fr:
+                        </td>
+                        <td class="uhrzeiten">
+                                09:00-12:00
+                        </td>
+                    </tr>
+                
+                
+                    <tr>
+                        <td colspan="2">
+                                und nach Vereinbarung
+                        </td>
+                    </tr>
+                
+            
+        
+        
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2"><div class="header" margin-top="20px">Offene Sprechstunden:</div></td>
+            </tr>
+            
+                <tr>
+                    <td class="wochentag">
+                            Mo:
+                    </td>
+                    <td class="uhrzeiten">
+                            12:00-13:00
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="wochentag">
+                            Di:
+                    </td>
+                    <td class="uhrzeiten">
+                            12:00-13:00
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="wochentag">
+                            Mi:
+                    </td>
+                    <td class="uhrzeiten">
+                            12:00-13:00
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="wochentag">
+                            Do:
+                    </td>
+                    <td class="uhrzeiten">
+                            12:00-13:00
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="wochentag">
+                            Fr:
+                    </td>
+                    <td class="uhrzeiten">
+                            12:00-13:00
+                    </td>
+                </tr>
+            
+        
+        
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2"><div class="header" margin-top="20px">Telefonische Erreichbarkeit:</div></td>
+            </tr>
+            
+                <tr>
+                    <td class="wochentag">
+                            Mo:
+                    </td>
+                    <td class="uhrzeiten">
+                            08:00-18:00
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="wochentag">
+                            Di:
+                    </td>
+                    <td class="uhrzeiten">
+                            08:00-18:00
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="wochentag">
+                            Mi:
+                    </td>
+                    <td class="uhrzeiten">
+                            08:00-13:00
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="wochentag">
+                            Do:
+                    </td>
+                    <td class="uhrzeiten">
+                            08:00-18:00
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="wochentag">
+                            Fr:
+                    </td>
+                    <td class="uhrzeiten">
+                            08:00-13:00
+                    </td>
+                </tr>
+            
+            
+        
+    </table>
+</td>
+	</tr>
+
+    
+
+<tr>
+
+
+
+
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"><span style="font-size: 10px !important;padding-right: 8px !important;">Betriebsstätte einer Einzelpraxis</span></td>
+
+	
+
+    
+        <script language="javascript">
+            document.write("<td id='mehrInfoZelle6' class='mehr_info_zelle' style='border-bottom: 1px solid #DBDBDB !important'>");
+            document.write("	<div class='mehr_info_div'>");
+            document.write("		<a href='#' id='suchergebnisse_zusatzinfo_link6' class='mehr_info_link'>[+] mehr Informationen</a>");
+            document.write("	</div>");
+            document.write("</td>");
+        </script>
+        <noscript>
+            <td id="mehrInfoZelle6" style="border-bottom: 1px solid #DBDBDB !important">
+            </td>
+        </noscript>
+	
+	
+
+
+</tr>
+				
+	<tr>
+		<td class="entfernung_zelle_mehr_info_bereich" colspan="4">
+			<div id="suchergebnisse_zusatzinfo6" class="suchergebnisse_zusatzinfo">
+				<table class="suchergebnisse_zusatzinfo">
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte">										
+							<table class="bsnr_lanr">
+								<tr>
+									<td>
+										
+											<span class="zusatzinfo_titel">LANR:</span>
+											<br/>
+											
+												
+													
+													
+														<span class="zusatzinfo_text">
+															457419001
+														</span>	
+																						
+													
+												<br/>
+											
+										
+									</td>										
+									<td>
+										
+										
+										<br/>
+										
+											
+												
+												
+													<span class="zusatzinfo_text">
+														
+													</span>	
+																					
+																					
+									</td>
+								</tr>
+							</table>								
+							<br/>
+
+							
+							<br/>						
+						</td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte">
+                            
+                                <span class="zusatzinfo_titel">Genehmigungen:</span>
+                                <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Asthma/COPD - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP KHK - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ1 - koordinierender Arzt /hausärztlich</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ2 - koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Diabetologisch qualifizierter Hausarzt LKK</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Hautkrebs-Screening - Früherkennungsuntersuchung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">LKK-Vertrag - Hausarzt-zentrierte Versorgung §73b SGB V</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Psychosomatische Grundversorgung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Abdomen und Retroperitoneum</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Uro-Genitalorgane</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie der Schilddrüse</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                <br/>
+                            
+                            
+						</td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte">																		
+								
+							
+								
+															
+						</td>
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+								
+					</table>
+				</div>
+			</td>
+		</tr>
+
+						
+			</table>
+		
+		
+		
+			</div>	
+		
+			
+			
+	
+	
+	
+	
+		
+		
+			
+				
+					<div class="suchergebnisse_praxis_tabelle" id="naechste_tabelle">
+									<table class="suchergebnisse_praxis_innere_tabelle">				
+				
+				
+					
+		
+	
+			 
+	<tr>
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"></td>
+		<td class="sprechzeiten_zelle leere_zeile"></td>	
+	</tr>
+
+	<tr>
+		<td class="entfernung_zelle">
+    
+        <table class="entfernung_tabelle">
+            <tr>
+                <td class="blase">
+
+                    
+                    <div class="blase">
+                        <img src="/arztsuche/project/img/icons/google/gm_icon_arztinliste_7.png;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    
+</td>
+				<td class="name_zelle">
+			<table class="name_tabelle">
+				<tr>
+					<td class="titel_name_zelle">
+					   <a href="/arztsuche/app/arztInfo.htm?arztCode=401b63b6b047e6ffee240c0ac8794b7f">Dr. med. Franziska Abendroth</a>
+					</td>								
+				</tr>
+				
+					<tr>				
+						<td class="arztart_zelle">
+							Hausarzt
+						</td>
+					</tr>
+				
+				<tr>
+					<td class="fachgebiet_zelle">
+						
+							
+							
+							Fachärztin für Kinder- und Jugendmedizin
+                            
+                        
+
+						
+						
+					</td>
+				</tr>
+            </table>
+            
+            <table class="name_tabelle">
+                <tr>
+                    <td class="nur_intern_sichtbar">
+                        
+                    </td>
+                </tr>
+            </table>
+		</td>
+		<td class="adresse_zelle">
+    <table class="adresse_tabelle">
+        <!-- im Fall von speziellen Leistungsortarten auch den Namen der Betriebsstaette hier ausgeben -->
+        
+        
+            <tr>
+                <td>
+                        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        Holzhauser Straße&nbsp;1
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        86899&nbsp;Landsberg am Lech
+                </td>
+            </tr>
+        
+
+        
+    </table>
+    <table class="tel_tabelle">
+        
+            <tr>
+                <td class="tel_td">
+                    Tel.:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                08191-22110
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+        
+        
+        
+    </table>
+</td>
+		<td class="sprechzeiten_zelle">
+    <div class="header">Sprechzeiten:</div>
+    <table class="sprechzeiten_tabelle">
+        
+            
+            
+                
+                    <tr>
+                        <td class="wochentag">
+                                Di:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:30-12:00 13:00-19:00
+                        </td>
+                    </tr>
+                
+                
+                    <tr>
+                        <td colspan="2">
+                                und nach Vereinbarung
+                        </td>
+                    </tr>
+                
+            
+        
+        
+        
+    </table>
+</td>
+	</tr>
+
+    
+
+<tr>
+
+
+
+
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"><span style="font-size: 10px !important;padding-right: 8px !important;">Angestellt in Betriebsstätte einer Einzelpraxis</span></td>
+
+	
+
+    
+	
+		<td class="name_zelle leere_zeile" style="border-bottom: 1px solid #DBDBDB !important"></td>
+    
+
+
+</tr>
+				
+	<tr>
+		<td class="entfernung_zelle_mehr_info_bereich" colspan="4">
+			<div id="suchergebnisse_zusatzinfo7" class="suchergebnisse_zusatzinfo">
+				<table class="suchergebnisse_zusatzinfo">
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte">										
+							<table class="bsnr_lanr">
+								<tr>
+									<td>
+										
+									</td>										
+									<td>
+										
+										
+										<br/>
+										
+											
+												
+												
+													<span class="zusatzinfo_text">
+														
+													</span>	
+																					
+																					
+									</td>
+								</tr>
+							</table>								
+							<br/>
+
+							
+							<br/>						
+						</td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte">
+                            
+                                <span class="zusatzinfo_titel">Genehmigungen:</span>
+                                <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Asthma/COPD - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Abdomen und Retroperitoneum</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Gehirn - offene Fontanelle (B-Modus)</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Uro-Genitalorgane</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie der Säuglingshüften</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                <br/>
+                            
+                            
+						</td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte">																		
+								
+							
+								
+															
+						</td>
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+								
+					</table>
+				</div>
+			</td>
+		</tr>
+
+						
+			</table>
+		
+		
+		
+			</div>	
+		
+			
+			
+	
+	
+	
+	
+		
+		
+			
+				
+					<div class="suchergebnisse_praxis_tabelle" id="naechste_tabelle">
+									<table class="suchergebnisse_praxis_innere_tabelle">				
+				
+				
+					
+		
+	
+			 
+	<tr>
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"></td>
+		<td class="sprechzeiten_zelle leere_zeile"></td>	
+	</tr>
+
+	<tr>
+		<td class="entfernung_zelle">
+    
+        <table class="entfernung_tabelle">
+            <tr>
+                <td class="blase">
+
+                    
+                    <div class="blase">
+                        <img src="/arztsuche/project/img/icons/google/gm_icon_arztinliste_8.png;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    
+</td>
+				<td class="name_zelle">
+			<table class="name_tabelle">
+				<tr>
+					<td class="titel_name_zelle">
+					   <a href="/arztsuche/app/arztInfo.htm?arztCode=8f19e2cbdd941ef3d8c56fe2fa9d5f75">Dr. med. Simon Abendroth</a>
+					</td>								
+				</tr>
+				
+					<tr>				
+						<td class="arztart_zelle">
+							Hausarzt
+						</td>
+					</tr>
+				
+				<tr>
+					<td class="fachgebiet_zelle">
+						
+							
+							
+							Facharzt für Kinder- und Jugendmedizin
+                            
+                        
+
+						
+						
+					</td>
+				</tr>
+            </table>
+            
+            <table class="name_tabelle">
+                <tr>
+                    <td class="nur_intern_sichtbar">
+                        
+                    </td>
+                </tr>
+            </table>
+		</td>
+		<td class="adresse_zelle">
+    <table class="adresse_tabelle">
+        <!-- im Fall von speziellen Leistungsortarten auch den Namen der Betriebsstaette hier ausgeben -->
+        
+        
+            <tr>
+                <td>
+                        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        Holzhauser Straße&nbsp;1
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        86899&nbsp;Landsberg am Lech
+                </td>
+            </tr>
+        
+
+        
+    </table>
+    <table class="tel_tabelle">
+        
+            <tr>
+                <td class="tel_td">
+                    Tel.:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                08191-22110
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+        
+        
+        
+    </table>
+</td>
+		<td class="sprechzeiten_zelle">
+    <div class="header">Sprechzeiten:</div>
+    <table class="sprechzeiten_tabelle">
+        
+            
+            
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mo:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:30-12:00 13:30-17:30
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Di:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:30-12:00 13:30-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mi:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:30-12:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Do:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:30-12:00 13:30-17:30
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Fr:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:30-12:00 13:30-16:00
+                        </td>
+                    </tr>
+                
+                
+                    <tr>
+                        <td colspan="2">
+                                und nach Vereinbarung
+                        </td>
+                    </tr>
+                
+            
+        
+        
+        
+    </table>
+</td>
+	</tr>
+
+    
+
+<tr>
+
+
+
+
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"><span style="font-size: 10px !important;padding-right: 8px !important;">Betriebsstätte einer Einzelpraxis</span></td>
+
+	
+
+    
+	
+		<td class="name_zelle leere_zeile" style="border-bottom: 1px solid #DBDBDB !important"></td>
+    
+
+
+</tr>
+				
+	<tr>
+		<td class="entfernung_zelle_mehr_info_bereich" colspan="4">
+			<div id="suchergebnisse_zusatzinfo8" class="suchergebnisse_zusatzinfo">
+				<table class="suchergebnisse_zusatzinfo">
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte">										
+							<table class="bsnr_lanr">
+								<tr>
+									<td>
+										
+									</td>										
+									<td>
+										
+										
+										<br/>
+										
+											
+												
+												
+													<span class="zusatzinfo_text">
+														
+													</span>	
+																					
+																					
+									</td>
+								</tr>
+							</table>								
+							<br/>
+
+							
+							<br/>						
+						</td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte">
+                            
+                                <span class="zusatzinfo_titel">Genehmigungen:</span>
+                                <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Asthma/COPD - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Psychosomatische Grundversorgung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Abdomen und Retroperitoneum</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Gehirn - offene Fontanelle (B-Modus)</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Nasennebenhöhlen</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Uro-Genitalorgane</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie der Schilddrüse</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie der Säuglingshüften</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                <br/>
+                            
+                            
+						</td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte">																		
+								
+							
+								
+															
+						</td>
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+								
+					</table>
+				</div>
+			</td>
+		</tr>
+
+						
+			</table>
+		
+		
+		
+			</div>	
+		
+			
+			
+	
+	
+	
+	
+		
+		
+			
+				
+					<div class="suchergebnisse_praxis_tabelle" id="naechste_tabelle">
+									<table class="suchergebnisse_praxis_innere_tabelle">				
+				
+				
+					
+		
+	
+			 
+	<tr>
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"></td>
+		<td class="sprechzeiten_zelle leere_zeile"></td>	
+	</tr>
+
+	<tr>
+		<td class="entfernung_zelle">
+    
+        <table class="entfernung_tabelle">
+            <tr>
+                <td class="blase">
+
+                    
+                    <div class="blase">
+                        <img src="/arztsuche/project/img/icons/google/gm_icon_arztinliste_9.png;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    
+</td>
+				<td class="name_zelle">
+			<table class="name_tabelle">
+				<tr>
+					<td class="titel_name_zelle">
+					   <a href="/arztsuche/app/arztInfo.htm?arztCode=7a0b6bee80aba092e9f14b0d2f60a209">Dr. med. Carl-Michael Abernethy</a>
+					</td>								
+				</tr>
+				
+					<tr>				
+						<td class="arztart_zelle">
+							Hausarzt
+						</td>
+					</tr>
+				
+				<tr>
+					<td class="fachgebiet_zelle">
+						
+							
+							
+							Praktischer Arzt
+                            
+                        
+
+						
+						
+					</td>
+				</tr>
+            </table>
+            
+            <table class="name_tabelle">
+                <tr>
+                    <td class="nur_intern_sichtbar">
+                        
+                    </td>
+                </tr>
+            </table>
+		</td>
+		<td class="adresse_zelle">
+    <table class="adresse_tabelle">
+        <!-- im Fall von speziellen Leistungsortarten auch den Namen der Betriebsstaette hier ausgeben -->
+        
+        
+            <tr>
+                <td>
+                        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        Bahnhofstraße&nbsp;11
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        82299&nbsp;Türkenfeld
+                </td>
+            </tr>
+        
+
+        
+    </table>
+    <table class="tel_tabelle">
+        
+            <tr>
+                <td class="tel_td">
+                    Tel.:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                08193-1634
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+        
+        
+            <tr>
+                <td>
+                    E-Mail:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                <a href="mailto:praxis@abernethy.de">praxis@abernethy.de</a>
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+        
+    </table>
+</td>
+		<td class="sprechzeiten_zelle">
+    <div class="header">Sprechzeiten:</div>
+    <table class="sprechzeiten_tabelle">
+        
+            
+            
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mo:
+                        </td>
+                        <td class="uhrzeiten">
+                                10:00-11:00 18:00-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Di:
+                        </td>
+                        <td class="uhrzeiten">
+                                10:00-11:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mi:
+                        </td>
+                        <td class="uhrzeiten">
+                                10:00-11:00 18:00-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Do:
+                        </td>
+                        <td class="uhrzeiten">
+                                10:00-11:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Fr:
+                        </td>
+                        <td class="uhrzeiten">
+                                10:00-11:00 18:00-19:00
+                        </td>
+                    </tr>
+                
+                
+                    <tr>
+                        <td colspan="2">
+                                und nach Vereinbarung
+                        </td>
+                    </tr>
+                
+            
+        
+        
+        
+    </table>
+</td>
+	</tr>
+
+    
+
+<tr>
+
+
+
+
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"><span style="font-size: 10px !important;padding-right: 8px !important;">Betriebsstätte einer Einzelpraxis</span></td>
+
+	
+
+    
+        <script language="javascript">
+            document.write("<td id='mehrInfoZelle9' class='mehr_info_zelle' style='border-bottom: 1px solid #DBDBDB !important'>");
+            document.write("	<div class='mehr_info_div'>");
+            document.write("		<a href='#' id='suchergebnisse_zusatzinfo_link9' class='mehr_info_link'>[+] mehr Informationen</a>");
+            document.write("	</div>");
+            document.write("</td>");
+        </script>
+        <noscript>
+            <td id="mehrInfoZelle9" style="border-bottom: 1px solid #DBDBDB !important">
+            </td>
+        </noscript>
+	
+	
+
+
+</tr>
+				
+	<tr>
+		<td class="entfernung_zelle_mehr_info_bereich" colspan="4">
+			<div id="suchergebnisse_zusatzinfo9" class="suchergebnisse_zusatzinfo">
+				<table class="suchergebnisse_zusatzinfo">
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte">										
+							<table class="bsnr_lanr">
+								<tr>
+									<td>
+										
+									</td>										
+									<td>
+										
+										
+										<br/>
+										
+											
+												
+												
+													<span class="zusatzinfo_text">
+														
+													</span>	
+																					
+																					
+									</td>
+								</tr>
+							</table>								
+							<br/>
+
+							
+							<br/>						
+						</td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte">
+                            
+                                <span class="zusatzinfo_titel">Genehmigungen:</span>
+                                <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Asthma/COPD - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP KHK - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ1 - koordinierender Arzt /hausärztlich</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ2 - koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Entwicklungsuntersuchungen</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Hautkrebs-Screening - Früherkennungsuntersuchung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Psychosomatische Grundversorgung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Schulung ohne Insulin</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Abdomen und Retroperitoneum</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Gesichts- und Halsweichteile</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Uro-Genitalorgane</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie der Schilddrüse</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                <br/>
+                            
+                            
+						</td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte">																		
+								
+							
+								
+															
+						</td>
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+								
+					</table>
+				</div>
+			</td>
+		</tr>
+
+						
+			</table>
+		
+		
+		
+			</div>	
+		
+			
+			
+	
+	
+	
+	
+		
+		
+			
+				
+					<div class="suchergebnisse_praxis_tabelle" id="naechste_tabelle">
+									<table class="suchergebnisse_praxis_innere_tabelle">				
+				
+				
+					
+		
+	
+			 
+	<tr>
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"></td>
+		<td class="sprechzeiten_zelle leere_zeile"></td>	
+	</tr>
+
+	<tr>
+		<td class="entfernung_zelle">
+    
+        <table class="entfernung_tabelle">
+            <tr>
+                <td class="blase">
+
+                    
+                    <div class="blase">
+                        <img src="/arztsuche/project/img/icons/google/gm_icon_arztinliste_10.png;jsessionid=BFCB13AE00EBEACA90A0F4506A9A4B2A">
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    
+</td>
+				<td class="name_zelle">
+			<table class="name_tabelle">
+				<tr>
+					<td class="titel_name_zelle">
+					   <a href="/arztsuche/app/arztInfo.htm?arztCode=bb9d58bfe7d5340284b89d5f23aa292a">Gerlinde Abert</a>
+					</td>								
+				</tr>
+				
+					<tr>				
+						<td class="arztart_zelle">
+							Hausarzt
+						</td>
+					</tr>
+				
+				<tr>
+					<td class="fachgebiet_zelle">
+						
+							
+							
+							Fachärztin für Allgemeinmedizin
+                            
+                        
+
+						
+						
+					</td>
+				</tr>
+            </table>
+            
+                <br />
+                <hr />
+                <table class="name_tabelle">
+                        <tr>
+                            <td>
+                                <span class="zusatzinfo_titel">Zusatzbezeichnungen:</span><br/>
+                                
+                                    Sportmedizin
+                                    <br/>
+                                
+                            </td>
+                        </tr>
+                </table>
+            
+            <table class="name_tabelle">
+                <tr>
+                    <td class="nur_intern_sichtbar">
+                        
+                    </td>
+                </tr>
+            </table>
+		</td>
+		<td class="adresse_zelle">
+    <table class="adresse_tabelle">
+        <!-- im Fall von speziellen Leistungsortarten auch den Namen der Betriebsstaette hier ausgeben -->
+        
+        
+            <tr>
+                <td>
+                        
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        Ernst-Putz-Straße&nbsp;8
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        97769&nbsp;Bad Brückenau
+                </td>
+            </tr>
+        
+
+        
+    </table>
+    <table class="tel_tabelle">
+        
+            <tr>
+                <td class="tel_td">
+                    Tel.:
+                </td>
+                <td>
+                    
+                        
+                            
+                            
+                                09741-3020
+                            
+                        
+                        <br/>
+                    
+                </td>
+            </tr>
+        
+        
+        
+        
+    </table>
+</td>
+		<td class="sprechzeiten_zelle">
+    <div class="header">Sprechzeiten:</div>
+    <table class="sprechzeiten_tabelle">
+        
+            
+            
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mo:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:00-12:00 15:30-19:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Di:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:00-12:00 15:30-18:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Mi:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:00-12:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Do:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:00-12:00
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="wochentag">
+                                Fr:
+                        </td>
+                        <td class="uhrzeiten">
+                                08:00-12:00 14:30-16:30
+                        </td>
+                    </tr>
+                
+                
+                    <tr>
+                        <td colspan="2">
+                                und nach Vereinbarung
+                        </td>
+                    </tr>
+                
+            
+        
+        
+        
+    </table>
+</td>
+	</tr>
+
+    
+
+<tr>
+
+
+
+
+		<td class="entfernung_zelle leere_zeile_right_border"></td>
+		<td class="name_zelle leere_zeile"></td>
+		<td class="adresse_zelle leere_zeile"><span style="font-size: 10px !important;padding-right: 8px !important;">Betriebsstätte einer örtlichen Gemeinschaftspraxis</span></td>
+
+	
+
+    
+        <script language="javascript">
+            document.write("<td id='mehrInfoZelle10' class='mehr_info_zelle' style='border-bottom: 1px solid #DBDBDB !important'>");
+            document.write("	<div class='mehr_info_div'>");
+            document.write("		<a href='#' id='suchergebnisse_zusatzinfo_link10' class='mehr_info_link'>[+] mehr Informationen</a>");
+            document.write("	</div>");
+            document.write("</td>");
+        </script>
+        <noscript>
+            <td id="mehrInfoZelle10" style="border-bottom: 1px solid #DBDBDB !important">
+            </td>
+        </noscript>
+	
+	
+
+
+</tr>
+				
+	<tr>
+		<td class="entfernung_zelle_mehr_info_bereich" colspan="4">
+			<div id="suchergebnisse_zusatzinfo10" class="suchergebnisse_zusatzinfo">
+				<table class="suchergebnisse_zusatzinfo">
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte">										
+							<table class="bsnr_lanr">
+								<tr>
+									<td>
+										
+									</td>										
+									<td>
+										
+										
+										<br/>
+										
+											
+												
+												
+													<span class="zusatzinfo_text">
+														
+													</span>	
+																					
+																					
+									</td>
+								</tr>
+							</table>								
+							<br/>
+
+							
+							<br/>						
+						</td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte">
+                            
+                                <span class="zusatzinfo_titel">Genehmigungen:</span>
+                                <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Asthma/COPD - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP KHK - Koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ1 - koordinierender Arzt /hausärztlich</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">DMP Typ2 - koordinierender Arzt</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Diabetologisch qualifizierter Hausarzt LKK</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Hautkrebs-Screening - Früherkennungsuntersuchung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">LKK-Vertrag - Hausarzt-zentrierte Versorgung §73b SGB V</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Langzeit-EKG - Aufzeichnung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Psychosomatische Grundversorgung</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie Abdomen und Retroperitoneum</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                        
+                                            
+                                            
+                                                <span class="zusatzinfo_text">Sonographie der Schilddrüse</span>
+                                            
+                                        
+                                        <br/>
+                                    
+                                <br/>
+                            
+                            
+						</td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte">																		
+								
+							
+								
+							
+									<table class="gemeinschaftspraxis">
+										<tr>
+											<td class="titel_zelle">
+												Ärzte der Praxis:
+											</td>
+										</tr>
+											
+										
+												<tr>
+													<td class="arzt_zelle">
+														<span class="arzt_name">
+															<a href="/arztsuche/app/arztInfo.htm?arztCode=94001026461c3f81e70d387fd3cfbb23">Dr. med. Joachim Hagitte</a>													
+														</span>
+														<br/>
+														<span class="arzt_fachrichtungen">	
+																		
+																	Facharzt für Allgemeinmedizin
+																<br/>																 
+															 
+														</span>																			
+													</td>
+												</tr>
+										
+												<tr>
+													<td class="arzt_zelle">
+														<span class="arzt_name">
+															<a href="/arztsuche/app/arztInfo.htm?arztCode=436bf29ac656a47e544eb9990479ed9a">Dr. med. Rainer Nelkenstock</a>													
+														</span>
+														<br/>
+														<span class="arzt_fachrichtungen">	
+																		
+																	Facharzt für Innere Medizin
+																<br/>																 
+															 
+														</span>																			
+													</td>
+												</tr>
+										
+									</table>
+															
+						</td>
+					</tr>
+					<tr>
+						<td class="suchergebnisse_zusatzinfo_erste_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_zweite_spalte leere_zeile_zusatzinfo"></td>
+						<td class="suchergebnisse_zusatzinfo_dritte_spalte leere_zeile_zusatzinfo"></td>							
+					</tr>
+								
+					</table>
+				</div>
+			</td>
+		</tr>
+
+						
+			</table>
+		
+		
+		
+			</div>	
+		
+			
+			
+	
+</table>
+</div>
+	
+   		
+
+
+
+
+
+<script language="javascript">
+function baestaetigeNutzungsbedingungen(buttonId, formId)
+{
+	document.getElementById('nutzungsbedingungen_akzeptiert').checked='';
+	buttonToClick=buttonId;
+	pdfFormToSubmit=formId;
+	$("#nutzungsbedingungen").dialog({
+		height : 220,
+		width : 420,
+		modal : true,
+		autoOpen : false,
+		overlay : {
+			backgroundColor : 'gray',
+			opacity : 0.8
+		}
+	});
+	$("#nutzungsbedingungen").dialog('open');	 
+}   
+
+function generierePdf(formId) {
+
+	if(document.getElementById('nutzungsbedingungen_akzeptiert').checked) {
+		document.getElementById(buttonToClick).disabled="true"; 
+		document.getElementById(buttonToClick).value="Bitte warten..."; 
+		document.forms[pdfFormToSubmit].submit();
+		hideNutzungsbedingungenDialog();
+	} else {
+		alert('Bitte Nutzungsbedingungen lesen und bestätigen!');
+	}
+
+}
+
+function hideNutzungsbedingungenDialog() {
+	$("#nutzungsbedingungen").dialog('close');
+
+}
+
+
+
+
+
+$(document).ready(function() {
+	
+
+		$('a#suchergebnisse_zusatzinfo_link1').click(function() {
+
+			
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link2').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo2').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link2').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link3').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo3').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link3').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link4').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo4').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link4').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link5').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo5').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link5').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link6').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo6').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link6').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link7').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo7').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link7').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link8').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo8').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link8').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link9').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo9').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link9').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link10').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo10').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link10').text('[+] mehr Informationen');
+					}
+				
+			
+			
+		$('#suchergebnisse_zusatzinfo1').slideToggle(600);
+			if ($('a#suchergebnisse_zusatzinfo_link1').text()=='[+] mehr Informationen') {
+				
+				$('a#suchergebnisse_zusatzinfo_link1').text('[-] schliessen');
+			}
+			else {
+				$('a#suchergebnisse_zusatzinfo_link1').text('[+] mehr Informationen');					
+			}	
+			
+			$('a#suchergebnisse_zusatzinfo_link1').blur();
+			return false;
+		});
+
+
+		$('#suchergebnisse_zusatzinfo1').css("display", "none");
+		$('a#suchergebnisse_zusatzinfo_link1').css("display", "");
+		$('a#routenplanung1').css("display", "");
+	
+
+		$('a#suchergebnisse_zusatzinfo_link2').click(function() {
+
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link1').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo1').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link1').text('[+] mehr Informationen');
+					}
+				
+			
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link3').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo3').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link3').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link4').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo4').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link4').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link5').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo5').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link5').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link6').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo6').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link6').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link7').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo7').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link7').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link8').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo8').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link8').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link9').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo9').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link9').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link10').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo10').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link10').text('[+] mehr Informationen');
+					}
+				
+			
+			
+		$('#suchergebnisse_zusatzinfo2').slideToggle(600);
+			if ($('a#suchergebnisse_zusatzinfo_link2').text()=='[+] mehr Informationen') {
+				
+				$('a#suchergebnisse_zusatzinfo_link2').text('[-] schliessen');
+			}
+			else {
+				$('a#suchergebnisse_zusatzinfo_link2').text('[+] mehr Informationen');					
+			}	
+			
+			$('a#suchergebnisse_zusatzinfo_link2').blur();
+			return false;
+		});
+
+
+		$('#suchergebnisse_zusatzinfo2').css("display", "none");
+		$('a#suchergebnisse_zusatzinfo_link2').css("display", "");
+		$('a#routenplanung2').css("display", "");
+	
+
+		$('a#suchergebnisse_zusatzinfo_link3').click(function() {
+
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link1').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo1').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link1').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link2').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo2').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link2').text('[+] mehr Informationen');
+					}
+				
+			
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link4').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo4').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link4').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link5').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo5').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link5').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link6').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo6').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link6').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link7').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo7').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link7').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link8').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo8').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link8').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link9').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo9').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link9').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link10').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo10').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link10').text('[+] mehr Informationen');
+					}
+				
+			
+			
+		$('#suchergebnisse_zusatzinfo3').slideToggle(600);
+			if ($('a#suchergebnisse_zusatzinfo_link3').text()=='[+] mehr Informationen') {
+				
+				$('a#suchergebnisse_zusatzinfo_link3').text('[-] schliessen');
+			}
+			else {
+				$('a#suchergebnisse_zusatzinfo_link3').text('[+] mehr Informationen');					
+			}	
+			
+			$('a#suchergebnisse_zusatzinfo_link3').blur();
+			return false;
+		});
+
+
+		$('#suchergebnisse_zusatzinfo3').css("display", "none");
+		$('a#suchergebnisse_zusatzinfo_link3').css("display", "");
+		$('a#routenplanung3').css("display", "");
+	
+
+		$('a#suchergebnisse_zusatzinfo_link4').click(function() {
+
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link1').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo1').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link1').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link2').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo2').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link2').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link3').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo3').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link3').text('[+] mehr Informationen');
+					}
+				
+			
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link5').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo5').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link5').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link6').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo6').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link6').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link7').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo7').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link7').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link8').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo8').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link8').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link9').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo9').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link9').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link10').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo10').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link10').text('[+] mehr Informationen');
+					}
+				
+			
+			
+		$('#suchergebnisse_zusatzinfo4').slideToggle(600);
+			if ($('a#suchergebnisse_zusatzinfo_link4').text()=='[+] mehr Informationen') {
+				
+				$('a#suchergebnisse_zusatzinfo_link4').text('[-] schliessen');
+			}
+			else {
+				$('a#suchergebnisse_zusatzinfo_link4').text('[+] mehr Informationen');					
+			}	
+			
+			$('a#suchergebnisse_zusatzinfo_link4').blur();
+			return false;
+		});
+
+
+		$('#suchergebnisse_zusatzinfo4').css("display", "none");
+		$('a#suchergebnisse_zusatzinfo_link4').css("display", "");
+		$('a#routenplanung4').css("display", "");
+	
+
+		$('a#suchergebnisse_zusatzinfo_link5').click(function() {
+
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link1').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo1').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link1').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link2').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo2').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link2').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link3').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo3').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link3').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link4').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo4').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link4').text('[+] mehr Informationen');
+					}
+				
+			
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link6').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo6').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link6').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link7').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo7').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link7').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link8').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo8').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link8').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link9').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo9').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link9').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link10').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo10').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link10').text('[+] mehr Informationen');
+					}
+				
+			
+			
+		$('#suchergebnisse_zusatzinfo5').slideToggle(600);
+			if ($('a#suchergebnisse_zusatzinfo_link5').text()=='[+] mehr Informationen') {
+				
+				$('a#suchergebnisse_zusatzinfo_link5').text('[-] schliessen');
+			}
+			else {
+				$('a#suchergebnisse_zusatzinfo_link5').text('[+] mehr Informationen');					
+			}	
+			
+			$('a#suchergebnisse_zusatzinfo_link5').blur();
+			return false;
+		});
+
+
+		$('#suchergebnisse_zusatzinfo5').css("display", "none");
+		$('a#suchergebnisse_zusatzinfo_link5').css("display", "");
+		$('a#routenplanung5').css("display", "");
+	
+
+		$('a#suchergebnisse_zusatzinfo_link6').click(function() {
+
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link1').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo1').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link1').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link2').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo2').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link2').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link3').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo3').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link3').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link4').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo4').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link4').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link5').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo5').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link5').text('[+] mehr Informationen');
+					}
+				
+			
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link7').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo7').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link7').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link8').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo8').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link8').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link9').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo9').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link9').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link10').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo10').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link10').text('[+] mehr Informationen');
+					}
+				
+			
+			
+		$('#suchergebnisse_zusatzinfo6').slideToggle(600);
+			if ($('a#suchergebnisse_zusatzinfo_link6').text()=='[+] mehr Informationen') {
+				
+				$('a#suchergebnisse_zusatzinfo_link6').text('[-] schliessen');
+			}
+			else {
+				$('a#suchergebnisse_zusatzinfo_link6').text('[+] mehr Informationen');					
+			}	
+			
+			$('a#suchergebnisse_zusatzinfo_link6').blur();
+			return false;
+		});
+
+
+		$('#suchergebnisse_zusatzinfo6').css("display", "none");
+		$('a#suchergebnisse_zusatzinfo_link6').css("display", "");
+		$('a#routenplanung6').css("display", "");
+	
+
+		$('a#suchergebnisse_zusatzinfo_link7').click(function() {
+
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link1').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo1').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link1').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link2').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo2').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link2').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link3').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo3').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link3').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link4').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo4').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link4').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link5').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo5').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link5').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link6').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo6').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link6').text('[+] mehr Informationen');
+					}
+				
+			
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link8').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo8').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link8').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link9').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo9').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link9').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link10').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo10').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link10').text('[+] mehr Informationen');
+					}
+				
+			
+			
+		$('#suchergebnisse_zusatzinfo7').slideToggle(600);
+			if ($('a#suchergebnisse_zusatzinfo_link7').text()=='[+] mehr Informationen') {
+				
+				$('a#suchergebnisse_zusatzinfo_link7').text('[-] schliessen');
+			}
+			else {
+				$('a#suchergebnisse_zusatzinfo_link7').text('[+] mehr Informationen');					
+			}	
+			
+			$('a#suchergebnisse_zusatzinfo_link7').blur();
+			return false;
+		});
+
+
+		$('#suchergebnisse_zusatzinfo7').css("display", "none");
+		$('a#suchergebnisse_zusatzinfo_link7').css("display", "");
+		$('a#routenplanung7').css("display", "");
+	
+
+		$('a#suchergebnisse_zusatzinfo_link8').click(function() {
+
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link1').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo1').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link1').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link2').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo2').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link2').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link3').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo3').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link3').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link4').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo4').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link4').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link5').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo5').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link5').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link6').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo6').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link6').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link7').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo7').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link7').text('[+] mehr Informationen');
+					}
+				
+			
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link9').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo9').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link9').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link10').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo10').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link10').text('[+] mehr Informationen');
+					}
+				
+			
+			
+		$('#suchergebnisse_zusatzinfo8').slideToggle(600);
+			if ($('a#suchergebnisse_zusatzinfo_link8').text()=='[+] mehr Informationen') {
+				
+				$('a#suchergebnisse_zusatzinfo_link8').text('[-] schliessen');
+			}
+			else {
+				$('a#suchergebnisse_zusatzinfo_link8').text('[+] mehr Informationen');					
+			}	
+			
+			$('a#suchergebnisse_zusatzinfo_link8').blur();
+			return false;
+		});
+
+
+		$('#suchergebnisse_zusatzinfo8').css("display", "none");
+		$('a#suchergebnisse_zusatzinfo_link8').css("display", "");
+		$('a#routenplanung8').css("display", "");
+	
+
+		$('a#suchergebnisse_zusatzinfo_link9').click(function() {
+
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link1').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo1').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link1').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link2').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo2').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link2').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link3').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo3').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link3').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link4').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo4').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link4').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link5').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo5').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link5').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link6').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo6').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link6').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link7').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo7').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link7').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link8').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo8').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link8').text('[+] mehr Informationen');
+					}
+				
+			
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link10').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo10').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link10').text('[+] mehr Informationen');
+					}
+				
+			
+			
+		$('#suchergebnisse_zusatzinfo9').slideToggle(600);
+			if ($('a#suchergebnisse_zusatzinfo_link9').text()=='[+] mehr Informationen') {
+				
+				$('a#suchergebnisse_zusatzinfo_link9').text('[-] schliessen');
+			}
+			else {
+				$('a#suchergebnisse_zusatzinfo_link9').text('[+] mehr Informationen');					
+			}	
+			
+			$('a#suchergebnisse_zusatzinfo_link9').blur();
+			return false;
+		});
+
+
+		$('#suchergebnisse_zusatzinfo9').css("display", "none");
+		$('a#suchergebnisse_zusatzinfo_link9').css("display", "");
+		$('a#routenplanung9').css("display", "");
+	
+
+		$('a#suchergebnisse_zusatzinfo_link10').click(function() {
+
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link1').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo1').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link1').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link2').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo2').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link2').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link3').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo3').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link3').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link4').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo4').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link4').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link5').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo5').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link5').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link6').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo6').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link6').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link7').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo7').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link7').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link8').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo8').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link8').text('[+] mehr Informationen');
+					}
+				
+			
+				
+					if ($('a#suchergebnisse_zusatzinfo_link9').text()=='[-] schliessen') {
+						$('#suchergebnisse_zusatzinfo9').slideUp(600);
+						$('a#suchergebnisse_zusatzinfo_link9').text('[+] mehr Informationen');
+					}
+				
+			
+				
+			
+			
+		$('#suchergebnisse_zusatzinfo10').slideToggle(600);
+			if ($('a#suchergebnisse_zusatzinfo_link10').text()=='[+] mehr Informationen') {
+				
+				$('a#suchergebnisse_zusatzinfo_link10').text('[-] schliessen');
+			}
+			else {
+				$('a#suchergebnisse_zusatzinfo_link10').text('[+] mehr Informationen');					
+			}	
+			
+			$('a#suchergebnisse_zusatzinfo_link10').blur();
+			return false;
+		});
+
+
+		$('#suchergebnisse_zusatzinfo10').css("display", "none");
+		$('a#suchergebnisse_zusatzinfo_link10').css("display", "");
+		$('a#routenplanung10').css("display", "");
+	
+
+    
+});
+
+</script>  
+
+    <div id="nutzungsbedingungen" title="Nutzungsbedingungen akzeptieren">
+
+    <table>
+    <form name="nutzungsbedingungen_bestaetigen"">
+        <tr>
+            <td id="checkbox_spalte"><input type="checkbox" id="nutzungsbedingungen_akzeptiert"  /></td>
+            <td colspan="3">Ich akzeptiere hiermit die <a href="http://www.kvb.de/footer-navigation/datenschutz/" target="_new">Nutzungsbedingungen</a> der Arztsuche der KVB und möchte die Suchergebnisse als PDF downloaden</td>
+        </tr>
+        <tr id="button_zeile">
+            <td />
+            <td id="herungerladen_spalte">
+                <button name="Herunterladen" type="button"
+                    value="Herunterladen" onclick="generierePdf()"/>Herunterladen
+                    </button>
+            </td>
+            <td>&nbsp;
+            </td>
+            <td id="abbrechen_spalte">
+                <button name="Abbrechen" type="button"
+                    value="Abbrechen" onclick="hideNutzungsbedingungenDialog();">Abbrechen
+                    </button>
+            </td>      
+        </tr>
+        </form>
+    </table>
+
+</div>
+
+<div class="suchergebnisse_navigationsbalken_unten">
+<table class="suchergebnisse_navigationsbalken">
+	<tr>
+    	<td width="33%" class="suchergebnisse_navigationsbalken_zelle_links">
+    		
+	    		
+					
+					&nbsp;		
+				
+					
+			</td>
+		<td width="33%" class="suchergebnisse_navigationsbalken_zelle_mitte">
+			Treffer 1 bis 10 von 19000
+		</td>
+		<td width="33%" class="suchergebnisse_navigationsbalken_zelle_rechts">
+			
+				
+					<form action="suchergebnisse.htm" method="get" style="margin: 0px; padding: 0px">
+						<input type="submit" value="nächste Seite" class="BUTTON FORWARD" id = "2"/>
+							
+								<input type="hidden" name="hashwert" value="3f48bfa494c160a935e7a18bee17"/>						
+							
+							
+											
+							
+								<input type="hidden" name="page" value="2"/>
+							
+                            
+                                <input type="hidden" name="zeigeKarte" value="false" />
+                            
+                            
+                                <input type="hidden" name="resultCount" value="19000"/>
+                            
+					</form>
+							
+				
+				  
+		</td>
+	</tr>
+</table>
+</div>
+<div class="suchergebnisse_pdf_buttons">
+<table class="suchergebnisse_pdf_buttons">
+	<tr>
+		<td class="linke_zelle">
+				
+		</td>
+		
+			<td class="rechte_zelle">
+		
+						<form action="generierePdfAZ.htm" method="POST" name="pdfFormAZ" style="padding: 0px !important; margin: 0px !important;">
+                            
+                                <input type="hidden" name="page" value="1"/>
+                            
+                            
+                                     
+							<input type="hidden" name="hashwert" value="3f48bfa494c160a935e7a18bee17">
+							<input type="hidden" name="gruppierung" value="false">
+                            
+                                <input type="hidden" name="resultCount" value="19000"/>
+                            
+							<input id="generiere_pdf_az_button" type="button" onclick="baestaetigeNutzungsbedingungen(this.id, document.forms['pdfFormAZ'].name);" class="BUTTON" style="width:280px" value="Ergebnisliste als PDF (alphabetisch sortiert)">
+						</form>
+		
+			</td>
+				
+	</tr>
+</table>					
+</div>	
+
+	
+	</div>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="FOOTER">
+            <script>
+                document.write("<a href=\"#\" class=\"PRINTER\" onClick='window.print()'>Drucken</a>");
+            </script>
+            <a href="http://www.kvb.de/datenschutz/">Datenschutz</a>
+            <a href="http://www.kvb.de/impressum/">Impressum</a>
+            <a class="LNKEMAIL" href="javascript:linkTo_UnCryptMailto('nbjmup;bs{utvdifAlwc/ef')">E-Mail schreiben</a>
+            <a class="LNKEMAIL"
+               href="https://www.kvb.de/praxis/online-angebote/datenpflege-arztsuche/"
+               target="_blank">Online Datenpflege</a>
+            <a class="LNKEMAIL" href="/arztsuche/app/showRessource.htm?name=manual" target="_blank">Handbuch </a>
+            Copyright &copy; 2020 KVB
+        </div>
+    </div>
+</div>
+</body>
+</html>
