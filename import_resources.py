@@ -11,7 +11,7 @@ import sqlalchemy as sa
 n_institutions = 4000
 
 institution_ids = range(n_institutions)
-resource_types = ["Betten", "Itensivbetten", "Beatmungsgeräte"]
+resource_types = ["Betten", "IPS-Betten ohne Beatmung", "IPS-Betten mit Beatmung", "Nicht-IPS-Betten mit Beatmung", "COVID-Betten", "Herz-Lungen-Geräte"]
 possible_max_capacities = range(100, 525, 25)
 
 max_capacities = [(institution_id, resource_type, random.choice(possible_max_capacities)) for institution_id in institution_ids for resource_type in resource_types]
