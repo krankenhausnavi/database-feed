@@ -6,6 +6,8 @@ import urllib.request
 
 import pandas as pd
 
+import sqlalchemy as sa
+
 import_url_doctors = "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/Arzt_doctors/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json"
 
 with urllib.request.urlopen(import_url_doctors) as response:
@@ -23,7 +25,7 @@ df_doctors_clean = df_doctors_clean[
     & ~df_doctors_clean.address_housenumber.isna()
     & ~df_doctors_clean.address_postcode.isna()]
 
-column_names = ["name", "type", "street", "city", "postcode", "phone", "website", "email", "lat", "long", "comment"]
+column_names = ["name", "type", "street", "city", "postcode", "phone", "website", "email", "lat", "lon", "comment"]
 
 df_import = pd.DataFrame(columns=column_names)
 
@@ -36,8 +38,15 @@ df_import.phone = df_doctors["contact_phone"]
 df_import.email = df_doctors["contact_email"]
 df_import.website = df_doctors["contact_website"]
 df_import.lat = df_doctors["y"]
-df_import.long = df_doctors["x"]
+df_import.lon = df_doctors["x"]
 df_import.comment = "TODO"
 
-df_import.to_csv("doctors.csv", index=False)
+conStr = ""
+
+with open ("connection", "r") as myfile:
+    conStr = myfile.readlines()[0]
+
+sqlCon = sa.create_engine(conStr)
+
+df_import.to_sql(name="institutions", con=sqlCon, index=False, if_exists="append", )
 
