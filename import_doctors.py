@@ -31,15 +31,17 @@ df_import = pd.DataFrame(columns=column_names)
 
 df_import.name = df_doctors_clean.name
 df_import.type = "doctor"
-df_import.street = df_doctors["address_street"] + " " + df_doctors["address_housenumber"]
-df_import.city = df_doctors["address_city"]
-df_import.postcode = df_doctors["address_postcode"]
-df_import.phone = df_doctors["contact_phone"]
-df_import.email = df_doctors["contact_email"]
-df_import.website = df_doctors["contact_website"]
-df_import.lat = df_doctors["y"]
-df_import.lon = df_doctors["x"]
+df_import.street = df_doctors_clean["address_street"] + " " + df_doctors_clean["address_housenumber"]
+df_import.city = df_doctors_clean["address_city"]
+df_import.postcode = df_doctors_clean["address_postcode"]
+df_import.phone = df_doctors_clean["contact_phone"]
+df_import.email = df_doctors_clean["contact_email"]
+df_import.website = df_doctors_clean["contact_website"]
+df_import.lat = df_doctors_clean["y"]
+df_import.lon = df_doctors_clean["x"]
 df_import.comment = "TODO"
+
+df_import.name = df_import.name.str.replace("\u200e", "")
 
 conStr = ""
 
