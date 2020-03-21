@@ -11,7 +11,7 @@ import sqlalchemy as sa
 import_url_doctors = "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/Arzt_doctors/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json"
 
 with urllib.request.urlopen(import_url_doctors) as response:
-    data = json.loads(response.read().decode())
+    data = json.loads(response.read().decode('latin-1', 'ignore'))
 
 processed_data = [{**item["attributes"], **item["geometry"]} for item in data["features"]]
 
@@ -40,8 +40,6 @@ df_import.website = df_doctors_clean["contact_website"]
 df_import.lat = df_doctors_clean["y"]
 df_import.lon = df_doctors_clean["x"]
 df_import.comment = "TODO"
-
-df_import.name = df_import.name.str.replace("\u200e", "")
 
 conStr = ""
 

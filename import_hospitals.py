@@ -11,7 +11,7 @@ import sqlalchemy as sa
 import_url_hospitals = "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/Krankenhaus_hospital/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json"
 
 with urllib.request.urlopen(import_url_hospitals) as response:
-    data = json.loads(response.read().decode())
+    data = json.loads(response.read().decode('latin-1', 'ignore'))
 
 processed_data = [{**item["attributes"], **item["geometry"]} for item in data["features"]]
 
@@ -47,4 +47,3 @@ with open ("connection", "r") as myfile:
 sqlCon = sa.create_engine(conStr)
 
 df_import.to_sql(name="institutions", con=sqlCon, index=False, if_exists="append", )
-
