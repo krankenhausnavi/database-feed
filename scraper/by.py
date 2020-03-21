@@ -30,7 +30,7 @@ def main():
         json.dump(opening_times, f)
 
 
-def _parse_page(bs, text, id_start):
+def _parse_page(bs, id_start):
     doctors = []
     opening_times = []
 
