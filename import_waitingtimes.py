@@ -4,6 +4,7 @@
 import random
 from datetime import datetime
 import pandas as pd
+import sqlalchemy as sa
 
 n_institutions = 4000
 
@@ -22,4 +23,12 @@ waiting_times = [(i_id,
 
 df_import = pd.DataFrame(waiting_times, columns=column_names)
 
-# TODO: Add to DB
+conStr = ""
+
+with open ("connection", "r") as myfile:
+    conStr = myfile.readlines()[0]
+
+sqlCon = sa.create_engine(conStr)
+
+df_import.to_sql(name="institutions", con=sqlCon, index=False, if_exists="append")
+
