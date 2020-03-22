@@ -2,7 +2,7 @@
 # coding: utf-8
 
 import re
-from tqdm import tqdm_notebook
+from tqdm import tqdm
 
 import json
 import urllib.request
@@ -53,7 +53,7 @@ for item in tqdm_notebook(hospital_soup):
         "lon": lon,
     })
 
-hospitals_json = 'hospitals.json'
+hospitals_json = 'hospitals_from_weisse_liste.json'
 
 with open(hospitals_json, 'w') as f:
     json.save(hospitals, f)

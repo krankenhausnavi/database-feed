@@ -7,7 +7,7 @@ import pandas as pd
 
 import sqlalchemy as sa
 
-hospitals_json = 'hospitals.json'
+hospitals_json = './scraper/hospitals_from_weisse_liste.json'
 
 with open(hospitals_json, 'r') as f:
     hospitals = json.load(f)
