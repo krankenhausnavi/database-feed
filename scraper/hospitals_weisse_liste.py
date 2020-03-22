@@ -56,4 +56,4 @@ for item in tqdm_notebook(hospital_soup):
 hospitals_json = 'hospitals_from_weisse_liste.json'
 
 with open(hospitals_json, 'w') as f:
-    json.save(hospitals, f)
+    json.dump(hospitals, f)
