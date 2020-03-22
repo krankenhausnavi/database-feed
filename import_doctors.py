@@ -8,10 +8,12 @@ import pandas as pd
 
 import sqlalchemy as sa
 
+import html
+
 import_url_doctors = "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/Arzt_doctors/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json"
 
 with urllib.request.urlopen(import_url_doctors) as response:
-    data = json.loads(response.read().decode('latin-1', 'ignore'))
+    data = json.loads(response.read().decode('utf8', 'ignore'))
 
 processed_data = [{**item["attributes"], **item["geometry"]} for item in data["features"]]
 
@@ -29,7 +31,7 @@ column_names = ["name", "type", "street", "city", "postcode", "phone", "website"
 
 df_import = pd.DataFrame(columns=column_names)
 
-df_import.name = df_doctors_clean.name
+df_import.name = html.escape(df_doctors_clean.name)
 df_import.type = "doctor"
 df_import.street = df_doctors_clean["address_street"] + " " + df_doctors_clean["address_housenumber"]
 df_import.city = df_doctors_clean["address_city"]
@@ -49,4 +51,3 @@ with open ("connection", "r") as myfile:
 sqlCon = sa.create_engine(conStr)
 
 df_import.to_sql(name="institutions", con=sqlCon, index=False, if_exists="append", )
-

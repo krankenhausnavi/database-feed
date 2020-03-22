@@ -1,1 +1,1 @@
-mysql://scott:tiger@localhost/test
+mysql://scott:tiger@localhost/test?charset=utf8
